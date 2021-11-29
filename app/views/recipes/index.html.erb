@@ -1,8 +1,9 @@
 <h1>RECEITAS PARAENSES</h1>
 
 <ul>
-    <% @recipes.each do |recipe| %> # o each irá iterar por todo o array em recipes e atribui-las à variável chamada "recipe".
-       <li> <%=recipe%> </li> #recipe será renderizado 
-    <%end%>
+    <% @recipes.each do |recipe| %>  
+       <li> <%= recipe %> </li>         
+    <% end %>
 
 </ul>
+
