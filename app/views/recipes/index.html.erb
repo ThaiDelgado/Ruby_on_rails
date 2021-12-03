@@ -2,8 +2,11 @@
 
 <ul>
     <% @recipes.each do |recipe| %>  
-       <li> <%= recipe %> </li>         
+       <li> 
+        <%=recipe.name%> 
+        <%=recipe.stuff%>
+        <%=recipe.calories%> 
+       </li>         
     <% end %>
-
 </ul>
 
