@@ -2,11 +2,39 @@
 
 <ul>
     <% @recipes.each do |recipe| %>  
-       <li> 
-        <%=recipe.name%> 
-        <%=recipe.stuff%>
-        <%=recipe.calories%> 
-       </li>         
+        <section>
+            <h2><%=recipe.name%></h2>
+
+            <p><%=recipe.stuff%></p>
+
+            <p><%=recipe.calories%></p>
+
+            <table>
+                <tr>
+                    <th>Modo de preparo:</th>
+                    <td><%=recipe.prepare_mode%></p>
+                </tr>
+                <tr>
+               
+                    <th>Custo do prato:</th>
+                    <td><%=number_to_currency(recipe.cost)%></td>
+                </tr>
+            
+            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        
     <% end %>
 </ul>
 
