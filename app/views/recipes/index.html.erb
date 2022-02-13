@@ -1,18 +1,18 @@
-<h1>RECEITAS PARAENSES</h1>
+<h1><%=pluralize(@recipes.size, "RECEITA PARAENSE", "RECEITAS PARAENSES")%></h1>
 
 <ul>
     <% @recipes.each do |recipe| %>  
         <section>
             <h2><%=recipe.name%></h2>
 
-            <p><%=recipe.stuff%></p>
+            <p><%=truncate(recipe.stuff, length:20, separator: ' ')%></p>
 
             <p><%=recipe.calories%></p>
 
             <table>
                 <tr>
                     <th>Modo de preparo:</th>
-                    <td><%=recipe.prepare_mode%></p>
+                    <td><%=truncate(recipe.prepare_mode, length:20, separator: ' ')%></p>
                 </tr>
                 <tr>
                
