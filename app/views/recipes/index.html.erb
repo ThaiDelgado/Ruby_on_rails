@@ -3,7 +3,7 @@
 <ul>
     <% @recipes.each do |recipe|%>  
         <section>
-            <h2><%= recipe.name %></h2>
+            <h2><%= link_to recipe.name, recipe_path(recipe) %></h2>
 
             <p><%= truncate(recipe.stuff, length:20, separator: ' ') %></p>
 
