@@ -3,17 +3,14 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all # Trazendo todas as receitas direto do banco de dados para a variável
   end
 
-#   def show
-#     ender json: @recipe
-#   end
+  def show
+    @recipe = Recipe.find(params[:id])
+    #render json: @recipe
+  end
 
-#   private
+  # private
 
-#   def set_recip
-#     @recipe = Recipe.find(:id)
-#   end
+  # def set_recipe
+  #   @recipe = Recipe.find(params[:id])
+  # end
 end
-# @recipes é uma variável de instância que irá receber todas as
-# informações vindas do banco de dados. A views enxerga a variável de instância.
-# Neste momento estamos atribuindo valores a esta variável, os quais serão renderizados na view.
-# Em um outro momento passaremos informações vindo ddireto do banco de dados.
