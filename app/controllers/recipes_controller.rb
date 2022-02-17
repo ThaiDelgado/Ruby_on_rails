@@ -15,8 +15,13 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     recipe_params = params.require(:recipe).permit(:name, :stuff, :calories, :prepare_mode, :cost)
     @recipe.update(recipe_params)
-    redirect_to @recipe
+    redirect_to @recipe #redireciona para a pagina da receita que foi alterada
   end
+
+  def new
+    @recipe = Recipe.new 
+  end
+  
   # private
 
   # def set_recipe
